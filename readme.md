@@ -1,18 +1,30 @@
 ![Bower](https://img.shields.io/bower/v/checklist-model.svg) [![NPM](https://img.shields.io/npm/v/checklist-model.svg)](https://www.npmjs.com/package/checklist-model) ![License](https://img.shields.io/npm/l/checklist-model.svg)
 
+# LOG
+FIX checklistChange
+```html
+<input type="checkbox" checklist-model="query.values_p" value="data_type" checklist-change="values_p_change"> 数据类型
+```
+```js
+function values_p_change(scope, value, ischecked){
+    console.debug(value, ischecked);
+}
+```
+
+
 # checklist-model
 AngularJS directive for list of checkboxes
 
-## Why this is needed?  
-In Angular one checkbox `<input type="checkbox" ng-model="...">` is linked 
-with one model.  
-But in practice we usually want one model to store array of checked values 
-from several checkboxes.  
-**Checklist-model** solves that task without additional code in controller.   
+## Why this is needed?
+In Angular one checkbox `<input type="checkbox" ng-model="...">` is linked
+with one model.
+But in practice we usually want one model to store array of checked values
+from several checkboxes.
+**Checklist-model** solves that task without additional code in controller.
 
 ## Usage
 You should play with attributes of `<input>` tag:
-  
+
 | Attribute          | Mandatory | Description                                   |
 | :----------------: | :-------: | --------------------------------------------- |
 | `checklist-model`  | Yes       | Use instead of `ng-model`                     |
@@ -27,7 +39,7 @@ You should play with attributes of `<input>` tag:
 
 Please, try out
 * live demo: http://vitalets.github.io/checklist-model
-* Jsfiddle: http://jsfiddle.net/Ebv3p/2/  
+* Jsfiddle: http://jsfiddle.net/Ebv3p/2/
 * Plunkr example (more advanced): http://plnkr.co/edit/pZLF0KesMDnIap0eCfSG?p=preview
 * Plunkr example for [tree list](http://plnkr.co/edit/QPLk98pCljp8dFtptSYz?p=preview)
 
@@ -64,4 +76,4 @@ The best way to involve is to report an issue/enhancement and then provide a pul
 3. Run `npm publish` to publish the new version to npm
 
 ## License
-MIT 
+MIT
